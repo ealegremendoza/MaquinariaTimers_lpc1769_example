@@ -24,7 +24,8 @@ int main(void)
 {
 	System_Init();
 	TIMER_Start(0,10,DoSomething);	//TIMER[0],T:10(segundos),Func: DoSomething
-    while(1) {
+	while(1)
+	{
     	TIMER_Analizar();
     }
     return 0 ;
