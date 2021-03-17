@@ -33,17 +33,17 @@ void GPIO_Mode(uint32_t Port,uint32_t Pin, uint32_t Mode)
 void GPIO_Dir(uint32_t Port, uint32_t Pin, uint32_t Dir)
 {
 	if(Dir)
-		GPIOs[Port].FIODIR = 1<<Pin;
+		GPIOs[Port].FIODIR |= 1<<Pin;
 	else
-		GPIOs[Port].FIODIR = 0<<Pin;
+		GPIOs[Port].FIODIR |= 0<<Pin;
 
 }
 void GPIO_Set(uint32_t Port, uint32_t Pin, uint32_t Estate)
 {
 	if(Estate)
-		GPIOs[Port].FIOSET = 1<<Pin;
+		GPIOs[Port].FIOSET |= 1<<Pin;
 	else
-		GPIOs[Port].FIOCLR = 1<<Pin;
+		GPIOs[Port].FIOCLR |= 1<<Pin;
 }
 
 uint32_t GPIO_Get (uint32_t Port, uint32_t Pin)
